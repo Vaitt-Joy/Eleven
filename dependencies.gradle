@@ -1,0 +1,11 @@
+def virtualApkVersion = '0.9.1'
+
+ext {
+    buildToolsVersion = "25.0.2"
+    compileSdkVersion = 25
+    minSdkVersion = 15
+    targetSdkVersion = 25
+    virtualapkClass = "com.didi.virtualapk:gradle:$virtualApkVersion"
+    virtualapkCore = "com.didi.virtualapk:core:$virtualApkVersion"
+    appcompat = 'com.android.support:appcompat-v7:22.2.0'
+}
