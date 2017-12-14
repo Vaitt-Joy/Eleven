@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.didi.virtualapk.plugin'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -21,5 +21,16 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:appcompat-v7:25+'
+}
+
+virtualApk {
+    // 插件资源表中的packageId，需要确保不同插件有不同的packageId.
+    packageId = 0x6f
+
+    // 宿主工程application模块的路径，插件的构建需要依赖这个路径
+    targetHost = '../VirtualHost/app'
+
+    //默认为true，如果插件有引用宿主的类，那么这个选项可以使得插件和宿主保持混淆一致
+    applyHostMapping = true
 }
