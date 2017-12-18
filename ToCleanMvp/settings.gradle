@@ -1,1 +1,1 @@
-include ':app', ':toroomdb', ':tookhttp', ':ToButterknife', ':tomvp', ':baselib',':toretrofit'
+include ':To-Clean-MVP', ':toroomdb', ':tookhttp', ':ToButterknife', ':tomvp', ':baselib',':toretrofit', ':TestApp'
